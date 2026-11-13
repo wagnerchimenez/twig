@@ -5,26 +5,7 @@
 {% include 'componentes/menu.twig' %}
 
 <main class="container py-5">
-    <div class="row align-items-center g-5">
-        <div class="col-lg-7">
-            <span class="badge text-bg-primary mb-3">Exemplo didático</span>
-            <h1 class="display-5 fw-bold">Olá, {{ usuario }}!</h1>
-            <p class="lead text-secondary">Explore uma aplicação minimalista com templates Twig reutilizáveis, componentes e macros.</p>
-            <a class="btn btn-primary btn-lg" href="/sobre.php">Conheça o projeto</a>
-        </div>
-        <div class="col-lg-5">
-            <div class="card border-0 shadow-sm">
-                <div class="card-body p-4">
-                    <h2 class="h5">O que você encontra aqui?</h2>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item px-0">Herança de templates</li>
-                        <li class="list-group-item px-0">Componentes reutilizáveis</li>
-                        <li class="list-group-item px-0">Macros e `embed`</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+    <h1 class="display-6">Olá, {{ usuario }} seja bem-vindo!</h1>
 </main>
 
 {% endblock %}
