@@ -40,14 +40,6 @@ docker compose run --rm composer install
 docker compose up -d
 ```
 
-## Publicação no GitHub Pages
-
-O workflow [`pages.yml`](.github/workflows/pages.yml) gera uma versão HTML estática do projeto e publica no GitHub Pages.
-
-Ative **Settings → Pages → GitHub Actions** no repositório. A página ficará disponível em:
-
-https://wagnerchimenez.github.io/twig/
-
 ## Estrutura
 
 ```text
