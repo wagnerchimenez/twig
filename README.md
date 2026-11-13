@@ -2,7 +2,7 @@
 
 Projeto didático em PHP que demonstra, com uma aplicação pequena, como usar o [Twig](https://twig.symfony.com/) para criar templates reutilizáveis.
 
-O exemplo cobre herança com `extends`/`block`, componentes com `include`, passagem de variáveis, macros e composição com `embed`.
+O exemplo cobre herança com `extends`/`block`, componentes com `include`, passagem de variáveis, filtros, macros e composição com `embed`.
 
 ## Requisitos
 
@@ -121,6 +121,17 @@ O menu fica em um arquivo próprio e é reutilizado nas páginas:
 {{ formulario.input('nome') }}
 {{ formulario.submit('enviar') }}
 ```
+
+### Filtros
+
+Os macros do formulário usam o filtro `capitalize` para transformar a primeira letra dos rótulos e do texto do botão em maiúscula:
+
+```twig
+{{ nome|capitalize }}
+{{ valor|capitalize }}
+```
+
+Assim, valores como `nome` e `enviar` são apresentados como `Nome` e `Enviar` sem alterar os valores originais recebidos pelo macro. Filtros podem ser encadeados para transformar ou formatar valores diretamente no template.
 
 ### Composição com `embed`
 
