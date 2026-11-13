@@ -4,41 +4,14 @@ Projeto didático em PHP que demonstra, com uma aplicação pequena, como usar o
 
 O exemplo demonstra `extends`, `include`, passagem de variáveis, filtros, macros e `embed`.
 
-## Requisitos
-
-- [Docker](https://docs.docker.com/get-docker/);
-- Docker Compose;
-- GNU Make (opcional).
-
-O ambiente usa PHP 8.5 com Apache e instala o Twig por meio do Composer.
-
 ## Como executar
-
-Na raiz do projeto:
 
 ```bash
 make setup
-```
-
-O comando instala as dependências e inicia os containers. A aplicação fica disponível em:
-
-- [Página inicial](http://localhost:8080/index.php)
-- [Sobre](http://localhost:8080/sobre.php)
-- [Contato](http://localhost:8080/contato.php)
-
-Para controlar o ambiente:
-
-```bash
 make up
 make down
 ```
-
-Sem `make`, use:
-
-```bash
-docker compose run --rm composer install
-docker compose up -d
-```
+Aplicação: http://localhost:8080/index.php
 
 ## Estrutura
 
@@ -61,14 +34,3 @@ docker compose up -d
             ├── card.twig
             └── formulario.twig
 ```
-
-## Conceitos demonstrados
-
-- `extends` e `block`: layout compartilhado em `template.twig`;
-- `include`: menu reutilizável;
-- variáveis: `usuario` enviado pelo PHP;
-- filtros: `capitalize` nos campos do formulário;
-- macros: inputs e botão em `formulario.twig`;
-- `embed`: card personalizado na página de contato.
-
-O formulário é apenas demonstrativo e não processa os dados enviados.
