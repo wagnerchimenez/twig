@@ -40,6 +40,18 @@ docker compose run --rm composer install
 docker compose up -d
 ```
 
+## Publicação no GitHub Pages
+
+O GitHub Pages publica arquivos estáticos e não executa PHP no servidor. Por isso, o workflow [`pages.yml`](.github/workflows/pages.yml) renderiza os templates Twig durante o GitHub Actions e publica os arquivos HTML gerados.
+
+Depois do primeiro push, em **Settings → Pages**, selecione **GitHub Actions** como fonte de publicação. O site ficará disponível em:
+
+```text
+https://wagnerchimenez.github.io/twig/
+```
+
+O deploy é executado automaticamente a cada push na branch `main`.
+
 ## Estrutura
 
 ```text
