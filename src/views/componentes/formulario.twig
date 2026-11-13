@@ -1,0 +1,11 @@
+{% macro input(nome) %}
+
+    <label for="{{ nome }}">{{ nome|capitalize }}:</label>
+    <input type="text" id="{{ nome }}" name="{{ nome }}">
+    <br>
+
+{% endmacro %}
+
+{% macro submit(valor) %}
+    <button type="submit">{{ valor|capitalize }}</button>
+{% endmacro %}

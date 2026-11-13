@@ -1,0 +1,24 @@
+
+{% extends 'template.twig' %}
+
+{% block conteudo %}
+
+{% include 'componentes/menu.twig' %}
+
+{% embed 'componentes/card.twig' %}
+{% block conteudo %}
+    {% import 'componentes/formulario.twig' as formulario %}
+
+        <form method="post" action="contato.php">
+
+            {{ formulario.input('nome') }}
+            {{ formulario.input('email') }}
+            {{ formulario.input('mensagem') }}
+            {{ formulario.submit('enviar') }}
+
+        </form>
+
+    {% endblock %}
+{% endembed %}
+{% endblock %}
+
